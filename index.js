@@ -41,46 +41,46 @@ showNames(filteredNames)
 showNames(names)
 
 
-let input = [
-  ['0001', 'Baruso', 'Imenualo', 'Toba', '29/12/1989', '+1 123874', 'baru@mmaol.com'],
-  ['0002', 'Doto', 'Barito', 'Spain', '08/01/1975', '+66 948572', 'toto@mmaol.com'],
-  ['0003', 'Yono', 'Sarmento', 'Jogja', '29/02/1966', '+1 850840', 'mento@mmaol.com']
-]
+// let input = [
+//   ['0001', 'Baruso', 'Imenualo', 'Toba', '29/12/1989', '+1 123874', 'baru@mmaol.com'],
+//   ['0002', 'Doto', 'Barito', 'Spain', '08/01/1975', '+66 948572', 'toto@mmaol.com'],
+//   ['0003', 'Yono', 'Sarmento', 'Jogja', '29/02/1966', '+1 850840', 'mento@mmaol.com']
+// ]
 
-// const myContact = () => {
-//   for (let i = 0; i < input.length; i++) {
-//     console.log(`NIK : ${input[i][0]}`);
-//     console.log(`First Name : ${input[i][1]}`);
-//     console.log(`Last Name : ${input[i][2]}`);
-//     console.log(`Birth Place : ${input[i][3]}`);
-//     console.log(`Birth : ${input[i][4]}`);
-//     console.log(`Phone Number : ${input[i][5]}`);
-//     console.log(`Email : ${input[i][6]}`);
-//     console.log(`................................`);
+// // const myContact = () => {
+// //   for (let i = 0; i < input.length; i++) {
+// //     console.log(`NIK : ${input[i][0]}`);
+// //     console.log(`First Name : ${input[i][1]}`);
+// //     console.log(`Last Name : ${input[i][2]}`);
+// //     console.log(`Birth Place : ${input[i][3]}`);
+// //     console.log(`Birth : ${input[i][4]}`);
+// //     console.log(`Phone Number : ${input[i][5]}`);
+// //     console.log(`Email : ${input[i][6]}`);
+// //     console.log(`................................`);
 
+// //   }
+// // }
+
+// const showContact = contacts => {
+//   for (let index = 0; index < contacts.length; index++) {
+//     console.log(`${index +1}  ${contacts[index].join('|')}`);
 //   }
 // }
 
-const showContact = contacts => {
-  for (let index = 0; index < contacts.length; index++) {
-    console.log(`${index +1}  ${contacts[index].join('|')}`);
-  }
-}
+// const addContact = contact => {
+//   input.push(contact)
+//   console.log(`add contact success`);
+//   showContact(input)
+// }
 
-const addContact = contact => {
-  input.push(contact)
-  console.log(`add contact success`);
-  showContact(input)
-}
+// const deleteContact = contact => {
+//   input.pop(contact)
+//   showContact(input)
+// }
 
-const deleteContact = contact => {
-  input.pop(contact)
-  showContact(input)
-}
-
-showContact(input)
-addContact([`0004`, `Mahmud`, `+6262626262`, `mud@mool.com`])
-deleteContact()
+// showContact(input)
+// addContact([`0004`, `Mahmud`, `+6262626262`, `mud@mool.com`])
+// deleteContact()
 
 //......................................................
 
@@ -134,13 +134,13 @@ const createContact = contact => {
 }
 
 const deleteContact = contact => {
-  myContacts.pop()
+  myContacts.pop() // myContacts.splice(myContacts.length - 1, 1)
   console.log(`delete success`);
   showContacts(myContacts);
 
 }
 
-showContacts(myContacts)
+// showContacts(myContacts)
 // const filteredContacts = filterContacts(myContacts, 12)
 // showContacts(filteredContacts)
 // createContact({
@@ -148,4 +148,5 @@ showContacts(myContacts)
 //   phone: `+62 626262`,
 //   email: `haku@mol.com`
 // })
+deleteContact();
 deleteContact();
