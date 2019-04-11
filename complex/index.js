@@ -42,16 +42,17 @@ const filterContacts = (contacts, minimumNameLength) => {
   return newContacts
 }
 
-const createContact = contact => {
-  myContacts.push(contact)
-  console.log(`add contact success`)
-  showContacts(myContacts)
+const createContact = (contacts, contact) => {
+  contacts.push(contact)
+
+  console.log(`Add one contact success`)
 }
 
-const deleteContact = contact => {
-  myContacts.pop() // myContacts.splice(myContacts.length - 1, 1)
-  console.log(`delete success`)
-  showContacts(myContacts)
+const deleteContact = contacts => {
+  contacts.pop()
+  // contacts.splice(contacts.length - 1, 1)
+
+  console.log(`Delete one contact success`)
 }
 
 showContacts(myContacts)
@@ -59,13 +60,23 @@ showContacts(myContacts)
 const filteredContacts = filterContacts(myContacts, 12)
 
 showContacts(filteredContacts)
+console.log('')
 
-createContact({
+createContact(myContacts, {
   name: `Haku`,
   phone: `+62 626262`,
   email: `haku@mol.com`
 })
+console.log('')
 
-deleteContact()
+showContacts(myContacts)
+console.log('')
 
-deleteContact()
+deleteContact(myContacts)
+console.log('')
+
+deleteContact(myContacts)
+console.log('')
+
+showContacts(myContacts)
+console.log('')
